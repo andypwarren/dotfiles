@@ -711,7 +711,7 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 ###############################################################################
 
 # Install VSCode settings
-cp vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json 2> /dev/null
+cp -r vscode/* ~/Library/Application\ Support/Code/User/ 2> /dev/null
 
 ###############################################################################
 # Google Cloud SDK                                                            #

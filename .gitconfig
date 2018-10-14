@@ -1,9 +1,8 @@
 [user]
-    name = James Warren
-    email = james@thisissoon.com
-    signingkey = D7B55A95C88107CA
+    name = Andrew Warren
+    email = andy@thisissoon.com
 [core]
-    editor = vim
+    editor = nano
     filemode = false
     excludesfile = ~/.gitignore_global
 [alias]

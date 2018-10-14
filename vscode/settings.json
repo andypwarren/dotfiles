@@ -1,55 +1,66 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.fontFamily": "Hack",
-    "editor.fontSize": 14,
-    "editor.wrappingIndent": "indent",
-    "editor.renderWhitespace": "boundary",
-    "editor.rulers": [80],
-    "editor.wordWrap": "on",
+	// Controls the font family.
+	"editor.fontFamily": "'Hack', ＭＳ ゴシック, 'MS Gothic', monospace",
+	// Configure file associations to languages (e.g. "*.extension": "html"). These have precedence over the default associations of the languages installed.
+    "files.associations": {
+		".ftl": "html"
+	},
 
-    "files.exclude": {
-        "**/.git": true,
-        "**/.DS_Store": true,
-        "**/*.pyc": true,
-        "**/__pycache__": true,
-        "**/.cache": true,
-        "node_modules/": true,
-        "bower_components/": true,
-        "**/*.egg": true,
-        "**/*.egg-info": true
+	"editor.insertSpaces": true,
+
+	//-------- Files configuration --------
+
+	// Configure glob patterns for excluding files and folders.
+	"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.DS_Store": true,
+			".grunt/*": true,
+			"coverage": true,
+			"_SpecRunner.html": true
     },
-
-    "files.insertFinalNewline": false,
-    "files.trimTrailingWhitespace": true,
-
-    "go.toolsGopath": "/Users/james/Development/Go/",
-    "go.inferGopath": true,
-    "go.formatOnSave": true,
-    "go.formatTool": "goimports",
-    "go.lintTool": "gometalinter",
-
-    "window.zoomLevel": 0,
-    "git.confirmSync": false,
-    "typescript.check.tscVersion": false,
-    "material-icon-theme.angular.iconsEnabled": true,
-    "material-icon-theme.folders.icons": "none",
-
-    "workbench.startupEditor": "welcomePage",
-    "workbench.panel.location": "right",
-    "git.autofetch": true,
-    "workbench.colorTheme": "One Dark Pro Vivid",
-    "workbench.activityBar.visible": true,
-    "extensions.ignoreRecommendations": false,
-    "gitlens.keymap": "alternate",
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.historyExplorer.enabled": true
+	"editor.wordWrap": true,
+	"window.nativeTabs": true,
+	"[makefile]": {
+        
+	},
+	"workbench.colorTheme": "One Dark Pro Vivid",
+	"gitlens.advanced.messages": {
+		"suppressCommitHasNoPreviousCommitWarning": false,
+		"suppressCommitNotFoundWarning": false,
+		"suppressFileNotUnderSourceControlWarning": false,
+		"suppressGitVersionWarning": false,
+		"suppressLineUncommittedWarning": false,
+		"suppressNoRepositoryWarning": false,
+		"suppressResultsExplorerNotice": false,
+		"suppressShowKeyBindingsNotice": true,
+		"suppressUpdateNotice": false,
+		"suppressWelcomeNotice": true
+	},
+	"cSpell.userWords": [
+		"Angulartics",
+		"Dragula",
+		"Subheader",
+		"firestore",
+		"leds",
+		"uuid"
+	],
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"python.disablePromptForFeatures": [
+		"pylint"
+	],
+	"cSpell.language": "en,en-GB",
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+	"editor.snippetSuggestions": "top",
+	"gitlens.keymap": "chorded",
+	"window.zoomLevel": 0,
+	"editor.tabSize": 2,
+	"extensions.ignoreRecommendations": false,
+	"gitlens.historyExplorer.enabled": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"editor.fontSize": 12.5,
+	"editor.lineHeight": 20,
+	"editor.detectIndentation": false,
 }

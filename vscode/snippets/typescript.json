@@ -1,0 +1,83 @@
+{
+	/*
+	 // Place your snippets for TypeScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	 // same ids are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"Print to the console": {
+		"prefix": "cl",
+		"body": [
+			"console.log($1);",
+		],
+		"description": "log output to the console"
+	},
+	"it block": {
+		"prefix": "it",
+		"body": [
+			"it('should $1', () => {",
+			"\t$2",
+			"});"
+		],
+		"description": "it block"
+	},
+	"it block with inject": {
+		"prefix": "iti",
+		"body": [
+			"it('should $1', inject([$2], (service: $2) => {",
+			"\t$3",
+			"}));"
+		],
+		"description": "it with inject block"
+	},
+	"describe block": {
+		"prefix": "desc",
+		"body": [
+			"describe('$1', () => {",
+			"\t$2",
+			"});"
+		],
+		"description": "describe block"
+	},
+	"beforeEach block": {
+		"prefix": "beforeEach",
+		"body": [
+			"beforeEach(() => {",
+			"\t$1",
+			"});"
+		],
+		"description": "beforeEach block"
+	},
+	"Angular Testing - debug element": {
+		"prefix": "de",
+		"body": [
+			"fixture.debugElement.query(By.css('$1'))",
+		],
+		"description": "Angular testing - query for a debug element"
+	},
+	"Angular Testing - detect changes element": {
+		"prefix": "dc",
+		"body": [
+			"fixture.detectChanges()",
+		],
+		"description": " Angular testing - detect changes"
+	},
+	"anon function": {
+		"prefix": "fn",
+		"body": [
+			"() => {",
+			"\t$1",
+			"};"
+		],
+		"description": "es6 anon arrow function"
+	}
+}
