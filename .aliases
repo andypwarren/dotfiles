@@ -14,6 +14,7 @@ alias k8=kubectl
 
 # zshrc
 alias zshrc="code ~/.zshrc"
+alias aliases="code ~/.aliases"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -159,3 +160,17 @@ alias path='echo -e ${PATH//:/\\n}'
 whoseport () {
  lsof -i ":$1" | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} LISTEN
 }
+
+# commitizen
+# get different types of commits
+alias commit-types="curl https://raw.githubusercontent.com/commitizen/conventional-commit-types/master/index.json"
+
+# git
+# commit a fix and rebase
+gfix () {
+  git commit -m fix && grbi ":$1" && git push -f
+}
+
+# Athens
+alias soondev='cd ~/Projects/soon/development'
+alias athens='kubectl --context soon-dev -n athens port-forward $(kubectl --context soon-dev -n athens get pods -lapp=athens-athens-proxy -o=jsonpath="{.items[0].metadata.name}") 5500:3000'

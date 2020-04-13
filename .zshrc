@@ -55,12 +55,15 @@ prompt pure
 # User configuration
 
 # Set default Editor to Vim
-export EDITOR="nano"
+export EDITOR="vim"
 
 # Golang
-export GOPATH=$HOME/Development/Go
+[[ -s "/Users/andy/.gvm/scripts/gvm" ]] && source "/Users/andy/.gvm/scripts/gvm"
+export GOPATH=$HOME/development/Go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
+export GOPRIVATE=gitlab.com
+
+alias athens='kubectl --context soon-dev1 -n athens port-forward $(kubectl --context soon-dev1 -n athens get pods -lapp=athens-athens-proxy -o=jsonpath="{.items[0].metadata.name}") 5500:3000'
 
 # Direnv
 if [ "$(command -v direnv)" != "" ]
@@ -75,6 +78,25 @@ export GPG_TTY=$(tty)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Private Aliases
 [ -f $HOME/.aliases ] && source $HOME/.aliases
+
+###-tns-completion-start-###
+if [ -f /Users/andy/.tnsrc ]; then 
+    source /Users/andy/.tnsrc 
+fi
+###-tns-completion-end-###
+
+# Jenv
+export JENV_ROOT="/usr/local/Cellar/jenv/"
+
+if which jenv > /dev/null; 
+	then eval "$(jenv init -)"; 
+fi
+
+# Android 
+export ANDROID_HOME="/Users/$USER/Library/Android/sdk/"
+export ANDROID_SDK=$ANDROID_HOME
+export ANDROID_AVD_HOME=/Users/$USER/.android/avd
+export PATH=/Users/$USER/Library/Android/sdk/platform-tools:$PATH
+

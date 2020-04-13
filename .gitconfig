@@ -1,8 +1,9 @@
 [user]
-    name = Andrew Warren
+    name = Andy Warren
     email = andy@thisissoon.com
+    signingkey = 3E0E5B6C
 [core]
-    editor = nano
+    editor = vim
     filemode = false
     excludesfile = ~/.gitignore_global
 [alias]
@@ -36,6 +37,8 @@
 [push]
     simple = true
 [commit]
-    gpgsign = true
-[includeIf "gitdir:~/Projects/Personal/"]
+    gpgsign = false
+[includeIf "gitdir:~/Projects/personal/"]
     path = ~/.gitconfig_personal
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/

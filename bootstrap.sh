@@ -14,6 +14,7 @@ function link() {
 	ln -s ${SOURCE}/.zshrc ~/.zshrc
 	ln -s ${SOURCE}/.gitconfig ~/.gitconfig
 	ln -s ${SOURCE}/.gitignore_global ~/.gitignore_global
+	ln -s ${SOURCE}/.gitconfig_personal ~/.gitconfig_personal
 }
 
 # Install ZSH
