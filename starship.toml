@@ -55,19 +55,113 @@ $status\
 $shell\
 $character"""
 
-[aws]
-disabled = true
+
+[directory]
+style = "blue"
+read_only = " "
+
+[git_branch]
+symbol = " "
+style = "dimmed"
+format = "[$symbol$branch]($style)"
+
+[git_status]
+format = '[$untracked](dimmed) ([$stashed$conflicted$deleted$renamed$modified$staged$ahead_behind]($style) )'
+style = "blue"
+stashed = "≡"
+untracked = "*"
+
+[git_commit]
+tag_disabled = false
+tag_symbol = " "
 
 [gcloud]
-format = "[$symbol $active]($style) "
-style = "bold yellow"
+symbol = " "
+style = "blue"
+format = '[$symbol$project]($style) '
 
-[golang]
-format = "via [Go $version](bold cyan) "
+[cmd_duration]
+format = "[$duration]($style) "
 
-[package]
+[aws]
+symbol = " "
 disabled = true
+
+[terraform]
+symbol = " "
+format = "[$symbol$workspace]($style) "
 
 [kubernetes]
 disabled = false
-format = 'on [$symbol$context( \($namespace\))]($style) '
+style = "blue"
+symbol = "ﱳ "
+format = '[$symbol$context[( \($namespace\))](dimmed)]($style) '
+
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+format = "[$symbol$version]($style) "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "

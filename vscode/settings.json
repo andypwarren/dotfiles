@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
 	// Controls the font family.
-	"editor.fontFamily": "'Hack', ＭＳ ゴシック, 'MS Gothic', monospace",
+	"editor.fontFamily": "'Hack Nerd Font Mono', ＭＳ ゴシック, 'MS Gothic', monospace",
 	// Configure file associations to languages (e.g. "*.extension": "html"). These have precedence over the default associations of the languages installed.
     "files.associations": {
 		".ftl": "html"
@@ -62,5 +62,5 @@
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"editor.fontSize": 12.5,
 	"editor.lineHeight": 20,
-	"editor.detectIndentation": false,
+	"editor.detectIndentation": false
 }
