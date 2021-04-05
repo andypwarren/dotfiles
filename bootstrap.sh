@@ -15,6 +15,7 @@ function link() {
 	ln -s ${SOURCE}/.gitconfig ~/.gitconfig
 	ln -s ${SOURCE}/.gitignore_global ~/.gitignore_global
 	ln -s ${SOURCE}/.gitconfig_personal ~/.gitconfig_personal
+	ln -s ${SOURCE}/starship.toml ~/.config/starship.toml
 }
 
 # Install ZSH
@@ -32,15 +33,6 @@ unset link;
 if [ ! -s "$HOME/.vim/autoload/plug.vim" ]
 then
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
-# Install prompt
-if [ ! -s "${HOME}/.zfunctions/prompt_pure_setup" ]
-then
-	git submodule update --init --recursive
-	mkdir ${HOME}/.zfunctions
-	ln -s "$(pwd)/pure/pure.zsh" "${HOME}/.zfunctions/prompt_pure_setup"
-	ln -s "$(pwd)/pure/async.zsh" "${HOME}/.zfunctions/async"
 fi
 
 # If we're on a Mac, let's setup homebrew and macOS config.

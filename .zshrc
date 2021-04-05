@@ -39,19 +39,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-
-# Prompt setup
-
-# Pure (https://github.com/sindresorhus/pure)
-fpath=( "$HOME/.zfunctions" $fpath )
-autoload -U promptinit; promptinit
-prompt pure
-
-# Add kube to prompt (https://github.com/jonmosco/kube-ps1)
-[[ -s "/usr/local/opt/kube-ps1/share/kube-ps1.sh" ]] && source "/usr/local/opt/kube-ps1/share/kube-ps1.sh" && PROMPT="$(kube_ps1)
-"$PROMPT
-
-
 # User configuration
 
 # Set default Editor to Vim
@@ -61,9 +48,10 @@ export EDITOR="vim"
 [[ -s "/Users/andy/.gvm/scripts/gvm" ]] && source "/Users/andy/.gvm/scripts/gvm"
 export GOPATH=$HOME/development/Go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export GOPRIVATE=gitlab.com
+export GOPRIVATE="gitlab.com,go.soon.build,git.spectrakey.co.uk"
 
 alias athens='kubectl --context soon-dev1 -n athens port-forward $(kubectl --context soon-dev1 -n athens get pods -lapp=athens-athens-proxy -o=jsonpath="{.items[0].metadata.name}") 5500:3000'
+alias athens-docker='GOPROXY=http://host.docker.internal:5500'
 
 # Direnv
 if [ "$(command -v direnv)" != "" ]
@@ -100,3 +88,14 @@ export ANDROID_SDK=$ANDROID_HOME
 export ANDROID_AVD_HOME=/Users/$USER/.android/avd
 export PATH=/Users/$USER/Library/Android/sdk/platform-tools:$PATH
 
+
+# added by travis gem
+[ ! -s /Users/andy/.travis/travis.sh ] || source /Users/andy/.travis/travis.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/andy/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andy/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/andy/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andy/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(starship init zsh)"

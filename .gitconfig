@@ -3,7 +3,7 @@
     email = andy@thisissoon.com
     signingkey = 3E0E5B6C
 [core]
-    editor = vim
+    editor = nano
     filemode = false
     excludesfile = ~/.gitignore_global
 [alias]
@@ -42,3 +42,5 @@
     path = ~/.gitconfig_personal
 [url "git@gitlab.com:"]
 	insteadOf = https://gitlab.com/
+[url "git@github.com:"]
+	insteadOf = https://github.com/
