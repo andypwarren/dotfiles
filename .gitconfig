@@ -3,7 +3,7 @@
     email = andy@thisissoon.com
     signingkey = 3E0E5B6C
 [core]
-    editor = nano
+    editor = vim
     filemode = false
     excludesfile = ~/.gitignore_global
 [alias]
@@ -31,16 +31,20 @@
 [hub]
     protocol = https
 [rebase]
-	autoStash = true
+	  autoStash = true
 [pull]
-	rebase = true
+	  rebase = true
 [push]
     simple = true
 [commit]
-    gpgsign = false
+    gpgsign = true
 [includeIf "gitdir:~/Projects/personal/"]
     path = ~/.gitconfig_personal
 [url "git@gitlab.com:"]
-	insteadOf = https://gitlab.com/
+	  insteadOf = https://gitlab.com/
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+	  nsteadOf = https://github.com/
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE

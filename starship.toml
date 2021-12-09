@@ -108,7 +108,7 @@ symbol = " "
 [dart]
 symbol = " "
 
-[docker]
+[docker_context]
 symbol = " "
 
 [elixir]
@@ -120,9 +120,6 @@ symbol = " "
 [golang]
 symbol = " "
 format = "[$symbol$version]($style) "
-
-[haskell]
-symbol = " "
 
 [hg_branch]
 symbol = " "

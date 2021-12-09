@@ -2,12 +2,12 @@
 # Based on https://github.com/mathiasbynens/dotfiles/blob/master/.aliases#L67:54
 
 # Docker
-alias dc=docker-compose
+alias dc="docker compose"
 alias krm="dc kill && dc rm -f"
 alias dc-hr="dc kill && dc rm -f && dc up"
 
 # Git cleanup command
-alias gitclean='printf "\n>>> Removing feature/ branches\n\n" && git branch | grep feature/ | xargs git branch -d {}'
+alias gitclean='printf "\n>>> Removing feature/ branches\n\n" && git branch | grep feature/ | xargs git branch -d {} && printf "\n>>> Removing fix/ branches\n\n" && git branch | grep fix/ | xargs git branch -d {}'
 
 # Kubernetes
 alias k8=kubectl
@@ -172,7 +172,7 @@ gfix () {
 }
 
 # Athens
-alias soondev='cd ~/Projects/soon/development'
+alias soondev='cd ~/Projects/soon_/development'
 alias athens='kubectl --context soon-dev -n athens port-forward $(kubectl --context soon-dev -n athens get pods -lapp=athens-athens-proxy -o=jsonpath="{.items[0].metadata.name}") 5500:3000'
 
 # Starship

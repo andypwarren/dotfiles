@@ -51,6 +51,7 @@ export EDITOR="vim"
 export GOPATH=$HOME/development/Go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export GOPRIVATE="gitlab.com,go.soon.build,git.spectrakey.co.uk"
+export GONOSUMDB="go.soon.build,gitlab.com/thisissoon/*/*"
 
 alias athens='kubectl --context soon-dev1 -n athens port-forward $(kubectl --context soon-dev1 -n athens get pods -lapp=athens-athens-proxy -o=jsonpath="{.items[0].metadata.name}") 5500:3000'
 alias athens-docker='GOPROXY=http://host.docker.internal:5500'
@@ -84,16 +85,6 @@ export JENV_ROOT="/usr/local/Cellar/jenv/"
 if which jenv > /dev/null; 
 	then eval "$(jenv init -)"; 
 fi
-
-# Android 
-export ANDROID_HOME="/Users/$USER/Library/Android/sdk/"
-export ANDROID_SDK=$ANDROID_HOME
-export ANDROID_AVD_HOME=/Users/$USER/.android/avd
-export PATH=/Users/$USER/Library/Android/sdk/platform-tools:$PATH
-
-
-# added by travis gem
-[ ! -s /Users/andy/.travis/travis.sh ] || source /Users/andy/.travis/travis.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/andy/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andy/google-cloud-sdk/path.zsh.inc'; fi
